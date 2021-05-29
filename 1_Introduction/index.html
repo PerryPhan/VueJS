@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction</title>
+    <link rel="shortcut icon" href="../img/vue.png" type="image/x-icon">
+  </head>
+  <body>
+    <h1>DAI</h1>
+    <div id="app">
+        <!-- String render -->
+        {{message}}
+        <!-- Variable render -->
+        <input v-bind:type="type" v-model="message"/>
+        <!-- [v-if] variable render-->
+        <span v-if="yes" > This span will hidden if yes's variable is false  </span>
+        <!-- [v-for] variable render -->
+        <ul v-for="todo in todos">
+            <li>{{todo}}</li>
+        </ul>
+        <!-- Component render -->
+        <ol>
+            <todo-item
+              v-for="item in groceryList"
+              v-bind:todo="item"
+              v-bind:key="item.id"
+            ></todo-item>
+          </ol>
+        <!-- Methods render -->
+        <button v-on:click="changeMessage">Change Message</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="customvue.js"></script>
+  </body>
+</html>
