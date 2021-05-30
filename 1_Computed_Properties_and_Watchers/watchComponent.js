@@ -11,7 +11,8 @@ var watchExampleVM = new Vue({
         this.debouncedGetAnswer()
       }
     },
-    // computed: {
+    // Computed can't work properly cause it's warning that duplicating 'question' not allowed    
+    // computed: { B
     //     // whenever question changes, this function will run
     //     question: function (newQuestion, oldQuestion) {
     //       this.answer = 'Waiting for you to stop typing...'
