@@ -1,0 +1,463 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  position:relative;
+  min-height:100vh;
+  overflow-x:hidden;
+  background-size:cover !important;
+  background-position:bottom center;
+}
+
+.nav{
+  padding-top:15px;
+  margin-bottom:75px;
+}
+
+
+.logo{
+    font-weight: bold;
+    font-size: 28px;
+    color: #000000;
+}
+.nav ul{
+  list-style:none;
+  padding:0;
+  margin:6px 0 0 0;
+  text-align:right;
+}
+.nav ul li{
+display:inline-block;
+  margin-left:15px;
+}
+
+.nav ul li a{
+  color:#333
+}
+
+.nav ul li.flex-active a{
+  color:cyan;
+}
+
+
+
+.hero{
+
+}
+
+h1.hero-text{
+  font-size:56px;
+  line-height:72px;
+  font-weight:bold;
+  color:#000;
+  margin-bottom:30px
+}
+
+.hero-text+p{
+  font-size:20px;
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+a.main-btn {
+    font-size: 16px;
+    background: cyan;
+    color: #000;
+    padding: 0 25px;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+  margin-left:10px;
+  transition-duration:0.3s
+}
+
+a.main-btn:focus,
+a.alt-btn:focus{
+  text-decoration:none;
+}
+
+a.alt-btn {
+    font-size: 16px;
+  border:2px solid;
+    color: #000;
+    padding: 0 25px;
+    height: 48px;
+    line-height: 44px;
+    display: inline-block;
+  transition-duration:0.3s
+}
+
+a.main-btn:hover{
+  background:#000;
+  color:#fff;
+  cursor:pointer;
+  text-decoration:none;
+  transition-duration:0.3s
+}
+a.alt-btn:hover{
+    cursor:pointer;
+  text-decoration:none;
+  transition-duration:0.3s;
+  border:2px solid cyan;
+}
+
+ul.grid{
+  margin-left:-2%;
+    list-style:none;
+    padding:0;
+  margin-top:45px;
+     transition-duration:0.3s;
+}
+
+ul.grid > li{
+  float:left;
+  width:calc(25% - 2%);
+  margin-left:2%;
+  overflow:hidden;
+}
+
+ul.grid:after{
+  content:'';
+  clear:both;
+  display:tablr;
+}
+
+ul.grid > li img{
+  display:block;
+  width:100%;
+  max-width:100%;
+transition-duration:0.3s
+}
+
+ul.grid > li:hover img{
+  filter:grayscale(100%) contrast(130%);
+  -webkit-filter:grayscale(100%) contrast(130%);
+  -moz-filter:grayscale(100%) contrast(130%);
+  transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+  transition-duration:0.3s
+}
+ul.grid > li a {
+  position:relative;
+  display:block
+}
+
+ul.grid > li a >span {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+  opacity:0;
+  transition-duration:0.3s;
+}
+
+ul.grid > li:hover a >span {
+  transition-duration:0.3s;
+    opacity:1;
+}
+
+ul.grid > li a >span span{
+  position:absolute;
+  left:0;
+  width:100%;
+  top:50%;
+  transform:translatey(50%);
+    transition-duration:0.3s;
+  text-transform:uppercase;
+    color:#fff;
+      text-align:center;
+}
+
+ul.grid > li:hover a >span span{
+transition-duration:0.3s;
+  transform:translatey(-50%);
+  -webkit-transform:translatey(-50%);
+  -moz-transform:translatey(-50%);
+}
+
+footer{
+  background-image:url(https://www.fluentstream.com/wp-content/uploads/2015/12/denverskylineGRAY-1024x274.png);
+  background-position:bottom;
+  background-repeat:no-repeat;
+  background-size:100%;
+    position:absolute;
+  bottom:0;
+left:0;
+  width:100%;
+  min-height:100vh;
+  z-index:-2
+}
+
+.colophon{
+  width:100%;
+  position:absolute;
+    bottom:5px;
+  color:#fff;
+  font-size:13px;
+}
+.colophon .container{
+  position:relative
+}
+.colophon a {
+    position: absolute;
+    right: 25px;
+    bottom: 2px;
+    width: 37px;
+  
+      -webkit-animation-name: leftright;
+    -webkit-animation-duration: .3s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+    -moz-animation-name: leftright;
+    -moz-animation-duration: .3s;
+    -moz-animation-direction: alternate;
+    -moz-animation-timing-function: linear;
+    -moz-animation-delay: 0s;
+    -moz-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes leftright {
+       from{
+        -webkit-transform: translate(0px,0px);
+        }
+
+
+         to {
+        -webkit-transform: translate(10px,0px);
+        }  
+      }
+
+@-moz-keyframes leftright {
+       from{
+        -moz-transform: translate(0px,0px);
+        }
+
+
+         to {
+        -moz-transform: translate(10px,0px);
+        }  
+      }
+
+.balls{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  min-height:100vh;
+  z-index:-1;
+}
+
+.balls .gb{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -193px;
+    top: 200px;
+    z-index: -1;
+    /* background: url(http://freeui.net/fcc-folio/grey-c.png); */
+    /* background-repeat: no-repeat; */
+    -webkit-animation-name: flow1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 160s;
+    -moz-animation-name: flow1;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 160s;
+    background: #636363;
+    display: block;
+    z-index: 500;
+    border-radius: 50%;
+}
+
+
+@-webkit-keyframes flow1 {
+0% {}
+
+100% {
+-webkit-transform:translateX(-3000px);
+}
+}
+
+
+@-moz-keyframes flow1 {
+  0% {}
+  
+100% {
+-moz-transform:translateX(-3000px);
+  }
+}
+
+
+.balls .lb{
+  width:15px;
+  height:15px;
+  position:absolute;
+  top:70px;
+  left:-100px;
+  z-index:0;
+  
+  -webkit-animation-name:flow2;
+-webkit-animation-timing-function:linear;
+-webkit-animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
+-webkit-animation-duration:80s;
+
+-moz-animation-name:flow2;
+-moz-animation-timing-function:linear;
+-moz-animation-iteration-count:infinite;
+-moz-animation-duration:80s;
+  
+    background: #333;
+    display: block;
+    z-index: 500;
+    border-radius: 50%;
+}
+
+
+@-webkit-keyframes flow2 {
+0% {}
+
+100% {
+-webkit-transform:translateX(3000px);
+}
+}
+
+
+@-moz-keyframes flow2 {
+  0% {}
+  
+100% {
+-moz-transform:translateX(3000px);
+  }
+}
+
+
+.balls .bb{
+  width:70px;
+  height:70px;
+  position:absolute;
+  bottom:250px;
+  left:-50px;
+  z-index:1;
+  
+  -webkit-animation-name:flow2;
+-webkit-animation-timing-function:linear;
+-webkit-animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
+-webkit-animation-duration:50s;
+
+-moz-animation-name:flow2;
+-moz-animation-timing-function:linear;
+-moz-animation-iteration-count:infinite;
+-moz-animation-duration:50s;
+      background: #999;
+    display: block;
+    z-index: 500;
+    border-radius: 50%;
+}
+
+.page-slider .slides{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+body.p1 .logo,
+body.p1 .menu li a,
+body.p2 .logo,
+body.p2 .menu li a,
+body.p3 .logo,
+body.p3 .menu li a,
+body.p4 .logo,
+body.p4 .menu li a{
+  color:#fff;
+}
+
+body.p1 .grid,
+body.p2 .grid,
+body.p3 .grid,
+body.p4 .grid{
+  transform:scale(0.35) translatey(500px);
+  transition-duration:0.3s;
+}
+
+body.p2,
+body.p3{
+  background-position:center center !important;
+}
+
+body.p1 .grid li a span,
+body.p2 .grid li a span,
+body.p3 .grid li a span,
+body.p4 .grid li a span{
+  display:none;
+}
+
+body.p1 .balls,
+body.p2 .balls,
+body.p3 .balls,
+body.p4 .balls,
+body.p1 .hero,
+body.p2 .hero,
+body.p3 .hero,
+body.p4 .hero{
+  opacity:0
+}
+
+body.p1 footer,
+body.p2 footer,
+body.p3 footer,
+body.p4 footer{
+  background:none;
+}
+
+body.p1 a#close,
+body.p2 a#close,
+body.p3 a#close,
+body.p4 a#close{
+  bottom:100px;
+  transition-duration:0.3s;
+  opacity:1;
+  display:block;
+}
+
+a#close{
+  position:absolute;
+  bottom:-100px;
+  color:#fff;
+  border:2px solid #fff;
+ padding:10px 20px; 
+  left:50%;
+  transform:translatex(-50%);
+  transition-duration:0.3s;
+  opacity:0;
+  display:none;
+}
+
+body .video {
+width: 100%;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-top: 25px;
+}
+
+.video > iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  box-shadow:5px 5px 0px #fff, 20px 20px 0px #000;
+}

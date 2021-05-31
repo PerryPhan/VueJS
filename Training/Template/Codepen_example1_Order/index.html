@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - fcc folio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css"
+    />
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id='app'>
+    <!-- 1----------------------COMPONENT : NAVBAR -------------------------------- -->
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <!-- 1.1---------------COMPONENT : LOGO -------------- -->
+          <div class="col-sm-6">
+            <span class="logo">HASAN ALI</span>
+          </div>
+          <!-- 1.2---------------COMPONENT : PAGE-SLIDER -------- -->
+          <div class="col-sm-6">
+            <div class="page-slider-nav">
+              <ul class="menu">
+                <li class="nav-button"><a href="#about">About</a></li>
+                <li class="nav-button"><a href="#work">Work</a></li>
+                <li class="nav-button"><a href="cat-video">Cat Video</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 1.2 EOL ------------ -->
+        </div>
+      </div>
+    </div>
+    <!-- 2----------------------COMPONENT : PAGE -------------------------------- -->
+    <div class="page">
+      <div class="page-slider">
+        <ul class="slides">
+          <!-- 2.1----------------------COMPONENT : SLIDE #1 ABOUT -------------- -->
+          <li class="slide">
+            <div class="container">
+              <div class="row">
+                <!-- 2.1.1----------------------COMPONENT : INFORMATION  -------------- -->
+                <div class="col-sm-10">
+                  <div class="hero">
+                    <h1 class="hero-text">
+                      Hey there, my name is
+                      <span class="grad">
+                        <span class="grad-text">Hasan</span></span
+                      >.<br />
+                      A developer, designer and explorer. On the quest to better
+                      myself.
+                    </h1>
+
+                    <a class="alt-btn"> View some work </a>
+                    <a
+                      class="main-btn"
+                      href="https://twitter.com/hvsh_"
+                      target="_blank"
+                    >
+                      Get me on twitter
+                    </a>
+                  </div>
+                </div>
+                <!-- EOL 2.1.1-------------- -->
+              </div>
+            </div>
+          </li>
+          <!-- 2.2----------------------COMPONENT : SLIDE #2 WORK ------------- -->
+          <li class="slide">
+            <div class="container neg-50">
+              <!-- 2.2.1----------------------COMPONENT : INTRODUCTION  -------------- -->
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                  <div class="hero">
+                    <h1 class="hero-text">Some random work</h1>
+                    <p>
+                      Some random work from Behance. All credit due to the
+                      original creators, I had nothing to do with these
+                      projects.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- 2.2.2----------------------COMPONENT : PROJECTS  -------------- -->
+              <ul class="grid">
+                <li>
+                  <a href="#" id="p1">
+                    <span><span>Shitty Render 1</span></span>
+                    <img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/202/cc702c67052055.Y3JvcCwxMDczLDg0MCw5Myww.jpg"
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#" id="p2"
+                    ><span><span>Shitty Render 2</span></span
+                    ><img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/202/97a87b66451465.Y3JvcCwxNDAwLDEwOTUsMCww.png"
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#" id="p3">
+                    <span><span>Shitty Render 3</span></span>
+                    <img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/202/b40b8c62585797.Y3JvcCwyNTM2LDE5ODQsMjMyLDA.jpg"
+                  /></a>
+                </li>
+
+                <li>
+                  <a href="#" id="p4">
+                    <span><span>Shitty Render 4</span></span>
+                    <img
+                      src="https://mir-s3-cdn-cf.behance.net/projects/202/11a02566595471.Y3JvcCwxNTc1LDEyMzEsMCww.jpg"
+                  /></a>
+                </li>
+              </ul>
+              <!-- EOL 2.2.2-------------- -->
+            </div>
+          </li>
+          <!-- 2.3---------------COMPONENT : SLIDE #3 VIDEO ------------- -->
+          <li class="slide">
+            <div class="container">
+              <div class="row">
+                <!-- 2.3.1--------COMPONENT: TEXT -->
+                <div class="col-sm-6">
+                  <div class="hero">
+                    <h1 class="hero-text">And now time for a cat video.</h1>
+                    <a
+                      class="alt-btn"
+                      href="https://twitter.com/hvsh_"
+                      target="_blank"
+                    >
+                      Get me on twitter
+                    </a>
+                  </div>
+                </div>
+                <!-- 2.3.2--------COMPONENT: IFRAME -->
+                <div class="col-sm-6">
+                  <div class="vimeo video">
+                    <iframe
+                      src="https://player.vimeo.com/video/11936324"
+                      frameborder="0"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- page slider -->
+    </div>
+
+    <a href="#" id="close">Close</a>
+    
+    <!-- 3.1---------------COMPONENT : FOOTER ------------- -->
+    <footer class="footer">
+      <div class="colophon text-center">
+        <div class="container">
+          <p>Built with love for FreeCodeCamp - HVSH</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 4.1---------------COMPONENT : BALLGROUND ------------- -->
+    <div class="balls">
+      <div class="lb"></div>
+      <div class="gb"></div>
+      <div class="bb"></div>
+    </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
