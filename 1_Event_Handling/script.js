@@ -1,38 +1,41 @@
-// Event Handling
+// Component Basics
+Vue.component('button-counter', {
+  // Return
+  
+  // data: function () {
+  //   return {
+  //     count: 0
+  //   }
+  // },
 
-var data = {
-  counter: 0,
-  name: "Dai",
-};
-
-var config = {
-  el: "#app",
-  data: data,
-  methods: {
-    greet: function (event) {
-      // `this` inside methods points to the Vue instance
-      alert("Hello " + this.name + "!");
-      // `event` is the native DOM event
-      if (event) {
-        alert(event.target.tagName);
-      }
-    },
-    say: function (message) {
-      alert(message)
-    },
-    warn: function (message, event) {
-      // now we have access to the native event
-      if (event) {
-        event.preventDefault()
-      }
-      alert(message)
-    },  
+  //  Không return 
+  data: {
+      count: 0
   },
-};
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+})
 
-var app = new Vue({
-  ...config,
-  data: { ...data, name: "Duong" },
-});
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+})
 
-// app.greet();
+Vue.component('blog-post', {
+  props: ['title'],
+  template: '<h3>{{ title }}</h3>'
+})
+
+new Vue({
+  el: '#blog-post-demo',
+  data: {
+    posts: [
+      { id: 1, title: 'My journey with Vue' },
+      { id: 2, title: 'Blogging with Vue' },
+      { id: 3, title: 'Why Vue is so fun' }
+    ]
+  }
+})
