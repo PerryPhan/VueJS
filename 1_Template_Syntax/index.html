@@ -13,6 +13,7 @@
       <p :class="email" v-once>{{name}}</p>
       <ul v-for="hobby in hobbies">
         <li>{{hobby}}</li>
+        <!-- {{{rawHTML}}} -->
       </ul>
       <div v-html="rawHTML"></div>
       <button @:click="name = `Dai`">Change it</button>

@@ -19,13 +19,16 @@ var config = {
 // dùng ở trên thay vì 
 const dais = dai;
 
+// Abstract class interface 
 
 var app = new Vue({
-    
     // el: '#app',
     // data: dais,
-    ...config
-
+    ...config,
+    data: {
+        ...data,
+        dai: "abc"
+    }
 })
 
 
